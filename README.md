@@ -1,6 +1,9 @@
 # TODO PLANNING
 
 
+## FLOW
+![img.png](img.png)
+
 #### BUILD
 ```bash
 make build
@@ -36,6 +39,4 @@ http://reactapp.todo-planning.orb.local
 - REACT
 - POSTGRES
 
-## FLOW
-![img.png](img.png)
 
