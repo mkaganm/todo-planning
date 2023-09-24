@@ -43,3 +43,9 @@ th {
   margin-top: 20px;  /* Adding some margin at the top */
   margin-bottom: 10px; /* Adding some margin at the bottom */
 }
+
+.week-container {
+  border-bottom: 3px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}

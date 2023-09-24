@@ -17,7 +17,7 @@ function App() {
         <div className="App">
             <h1 className="main-title">Todo Planning</h1>
             {data.data.planning.week_plans.map((weekPlan) => (
-                <div key={weekPlan.week_number}>
+                <div key={weekPlan.week_number} className="week-container">
                     <h2 className="week-title">Week {weekPlan.week_number}</h2>
                     {weekPlan.developer_tasks.map((devTask) => (
                         <div key={devTask.developer.id}>
