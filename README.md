@@ -35,6 +35,8 @@ http://reactapp.todo-planning.orb.local
 
 ## TECHS
 - GOLANG
+- FIBER
+- GORM
 - gRPC
 - REACT
 - POSTGRES
