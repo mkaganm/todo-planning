@@ -1,11 +1,11 @@
 package main
 
 import (
+	"github.com/mkaganm/providergrpc"
 	"google.golang.org/grpc"
 	"log"
 	"net"
 	"provider1/internal/config"
-	"provider1/internal/providergrpc"
 	"provider1/internal/server"
 )
 

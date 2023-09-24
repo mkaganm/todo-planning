@@ -2,8 +2,8 @@ package server
 
 import (
 	"context"
+	"github.com/mkaganm/providergrpc"
 	"provider1/internal/client"
-	"provider1/internal/providergrpc"
 )
 
 type Server struct {

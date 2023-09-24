@@ -1,9 +1,9 @@
 package api
 
 import (
+	"github.com/mkaganm/providergrpc"
 	"planningservice/internal/data"
 	"planningservice/internal/planning"
-	"planningservice/internal/providergrpc"
 )
 
 type FailedResponse struct {

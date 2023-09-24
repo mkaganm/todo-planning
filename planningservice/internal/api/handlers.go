@@ -2,12 +2,12 @@ package api
 
 import (
 	"github.com/gofiber/fiber/v2"
+	"github.com/mkaganm/providergrpc"
 	"log"
 	"planningservice/internal/client"
 	"planningservice/internal/config"
 	"planningservice/internal/data"
 	"planningservice/internal/planning"
-	"planningservice/internal/providergrpc"
 	"sync"
 )
 

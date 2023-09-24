@@ -1,8 +1,8 @@
 package planning
 
 import (
+	"github.com/mkaganm/providergrpc"
 	"planningservice/internal/data"
-	"planningservice/internal/providergrpc"
 	"sort"
 )
 

@@ -2,9 +2,9 @@ package client
 
 import (
 	"context"
+	"github.com/mkaganm/providergrpc"
 	"google.golang.org/grpc"
 	"log"
-	"planningservice/internal/providergrpc"
 )
 
 // GetTasks is a function that returns tasks
