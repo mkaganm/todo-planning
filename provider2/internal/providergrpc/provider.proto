@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package providergrpc;
+
+option go_package = "/providergrpc";
+
+service Provider {
+  rpc GetTasks(Request) returns (Response);
+}
+
+message Request{}
+
+message Response {
+  repeated Task tasks = 1;
+}
+
+message Task {
+  string Name = 1;
+  int32 Level = 2;
+  int32 Duration = 3;
+}

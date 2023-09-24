@@ -1,0 +1,88 @@
+version: "3.8"
+services:
+
+  db:
+    image: postgres
+    container_name: postgres_instance
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: todo_planning   # auto create database
+    networks:
+      - network
+    volumes:
+      - local_pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_instance
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "5050:5050"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_LISTEN_ADDRESS: 0.0.0.0
+      PGADMIN_LISTEN_PORT: 5050
+    networks:
+      - network
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+
+  planningservice:
+    build:
+      context: ./planningservice
+      dockerfile: planningservice.dockerfile
+    container_name: planningservice
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - network
+
+  provider1:
+    build:
+      context: ./provider1
+      dockerfile: provider1.dockerfile
+    container_name: provider1
+    restart: always
+    ports:
+      - "3001:3001"
+    networks:
+      - network
+
+  provider2:
+    build:
+      context: ./provider2
+      dockerfile: provider2.dockerfile
+    container_name: provider2
+    restart: always
+    ports:
+      - "3002:3002"
+    networks:
+      - network
+
+  reactapp:
+    build:
+      context: ./reactapp
+      dockerfile: reactapp.dockerfile
+    container_name: react_app_instance
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - network
+
+networks:
+  network:
+    driver: bridge
+
+volumes:
+  local_pgdata:
+  pgadmin-data:

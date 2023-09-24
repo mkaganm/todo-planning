@@ -1,0 +1,45 @@
+.App {
+  padding: 0 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 95%;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.main-title {
+  font-size: 2.5em;  /* Making the title larger */
+  text-align: center;  /* Centering the title */
+  margin-bottom: 30px;  /* Adding some margin at the bottom */
+}
+
+.week-title {
+  font-size: 2em;  /* Making the week title larger */
+  text-align: center;  /* Centering the week title */
+  margin-top: 20px;  /* Adding some margin at the top */
+  margin-bottom: 20px;  /* Adding some margin at the bottom */
+}
+
+.developer-title {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 20px;  /* Adding some margin at the top */
+  margin-bottom: 10px; /* Adding some margin at the bottom */
+}
